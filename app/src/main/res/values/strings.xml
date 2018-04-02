@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Second_Line_of_Code</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+</resources>

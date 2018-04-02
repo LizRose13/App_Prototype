@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--1.对于不在SDK里内置的，需要用的时候要把完整的包路径名写出来-->
+<!--2.一定要有app指定的命名空间才能起作用-->
+<android.support.percent.PercentFrameLayout
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/bt1"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%"
+        android:layout_gravity="left|top"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/bt2"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%"
+        android:layout_gravity="right|bottom"
+        android:text="Button" />
+
+</android.support.percent.PercentFrameLayout>

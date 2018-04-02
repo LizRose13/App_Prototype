@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <com.example.hp.second_line_of_code.ui.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="5"
+        android:id="@+id/titleLayout">
+    </com.example.hp.second_line_of_code.ui.TitleLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!--注意fragment的id和name都要写对，否则会报奇怪的错误-->
+        <!--在使用linearLayout的权重时要使用match_parent才有效-->
+        <fragment
+            android:id="@+id/fragment3"
+            android:name="com.example.hp.second_line_of_code.LeftFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/frag_right_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

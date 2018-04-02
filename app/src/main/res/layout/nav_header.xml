@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_nav"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_nav_image"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:src="@mipmap/icon_pineapple"
+        android:layout_centerInParent="true"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_nav_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_nav_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:text="LizYang" />
+
+    <TextView
+        android:id="@+id/tv_nav_signature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nav_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="stay hungry stay foolish" />
+
+</RelativeLayout>

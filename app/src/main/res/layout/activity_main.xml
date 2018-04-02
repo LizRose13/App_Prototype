@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--gridlayout的使用：第一行的控件宽度决定下面的控件宽度-->
+<!--为兼容老的版本，而引入新的命名空间来定义之前没有的属性-->
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        android:rowCount="5">
+        <!--1.加载相同标题栏-->
+        <!--<include layout="@layout/title"/>-->
+        <!--&lt;!&ndash;2.加载自定义布局&ndash;&gt;-->
+        <!--<com.example.hp.second_line_of_code.ui.TitleLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_columnSpan="5"-->
+        <!--android:id="@+id/titleLayout">-->
+        <!--</com.example.hp.second_line_of_code.ui.TitleLayout>-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:layout_row="0"
+            android:background="@color/colorPrimaryDark"
+            app:titleTextColor="@color/colorWhite"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AlertDialog.AppCompat.Light" />
+
+
+        <Button
+            android:id="@+id/toSecondBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+          android:layout_margin="@dimen/grid_item_margin"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorAccent"
+            android:text="toSecond"
+            />
+
+        <Button
+            android:id="@+id/btn_main_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_margin="@dimen/grid_item_margin"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorAccent"
+            android:text="listview" />
+
+        <Button
+            android:id="@+id/btn_main_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_margin="@dimen/grid_item_margin"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorAccent"
+            android:text="fragment" />
+
+        <Button
+            android:id="@+id/btn_main_http"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:layout_margin="@dimen/grid_item_margin"
+
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorAccent"
+            android:text="http" />
+
+        <Button
+            android:id="@+id/btn_main_thread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_margin="@dimen/grid_item_margin"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorAccent"
+            android:text="thread" />
+
+        <Button
+            android:id="@+id/btn_main_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_margin="@dimen/grid_item_margin"
+
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/colorAccent"
+            android:text="recycler" />
+
+    </GridLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_main_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_check_circle_white_48dp"
+            />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+<android.support.design.widget.NavigationView
+    android:id="@+id/nav_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    app:menu="@menu/nav_menu"
+    app:headerLayout="@layout/nav_header"
+    />
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
